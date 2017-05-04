@@ -7,21 +7,21 @@
   position: fixed;
 }
 
-.Main-container {
+.main-container {
   display: flex;
   align-self: center;
   color: white;
   flex-direction: column;
 }
 
-.Social-Row {
+.social-row {
   display: flex;
   flex-direction: row;
   align-self: center;
   
 }
 
-.Social-Button {
+.social-button {
   font-family: Courier New, Courier, monospace;
   font-size: small;
   background-color: transparent;
@@ -40,20 +40,19 @@
   outline: none;
 }
 
-.Social-Button:hover {
+.social-button:hover {
   transform: scale(1.25);
   transition: transform 0.15s ease-out;
 }
 
-.Social-Button:active {
+.social-button:active {
   transform: scale(1);
   transition: transform 0.01s;
 }
 
-.Social-Button:visited {
+.social-button:visited {
   transform: scale(1);
 }
-.Starfield { height:100%; left:0; position:absolute; top:0; width:100%; z-index:0;}
 
 h1 {
   font-size: 2.5em;

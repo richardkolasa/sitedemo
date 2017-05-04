@@ -5,9 +5,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Main-container">
+        <div className="main-container">
           <h1>Rich Kolasa</h1>
-          <div className="Social-Row">
+          <div className="social-row">
               <a href="https://www.twitter.com/richardkolasa">
                 <button className="Social-Button">Twitter</button>
               </a>
