@@ -106,12 +106,6 @@ footer {
     }
 }
 
-@media screen and (max-width: 320px) {
-    .bio {
-        max-width: 80%;
-    }
-}
-
 .bio {
     width: 75%;
     color: #E6AF2E;
