@@ -5,19 +5,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-background">
+        <div className="Main-container">
           <h1>Rich Kolasa</h1>
           <div className="Social-Row">
-            <button className="Social-Button">
-              <a href="https://www.twitter.com/richardkolasa">Twitter</a>
-            </button>
-            <button className="Social-Button">
-              <a href="https://medium.com/@richkolasa">Medium</a>
-            </button>
-            <button className="Social-Button">
-              GitLab
-            </button>
+              <a href="https://www.twitter.com/richardkolasa">
+                <button className="Social-Button">Twitter</button>
+              </a>
+              <a href="https://medium.com/@richkolasa">
+                <button className="Social-Button">Medium</button>
+              </a>
+              <a href="https://www.linkedin.com/in/richardkolasa/">
+                <button className="Social-Button">LinkedIn</button>
+              </a>
           </div>
+          <h2>I made this thing with React.</h2>
         </div>
       </div>
     );
