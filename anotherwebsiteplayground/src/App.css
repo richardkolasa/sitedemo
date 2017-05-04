@@ -107,6 +107,7 @@ footer {
 }
 
 .bio {
+    max-width: 800px;
     width: 75%;
     color: #E6AF2E;
 }
@@ -114,14 +115,4 @@ footer {
 .call-to-action {
   padding-top: 10px;
   color: #A9CBB7;
-}
-
-@font-face {
-  font-family: 'PalanquinLight';
-  src: url(./palanquin/palanquin-light.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Palanquin';
-  src: url(./palanquin/palanquin-regular.ttf) format('truetype');
 }
