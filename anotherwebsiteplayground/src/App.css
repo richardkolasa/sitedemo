@@ -1,5 +1,4 @@
 .App {
-  justify-content: center;
   display: flex;
   background-color: teal;
   width: 100%;
@@ -8,17 +7,17 @@
 }
 
 .main-container {
-  display: flex;
-  align-self: center;
-  color: white;
+  display: inline-flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
 }
 
 .social-row {
-  display: flex;
   flex-direction: row;
   align-self: center;
-  
+  padding-top: 20px;
 }
 
 .social-button {
@@ -56,16 +55,25 @@
 
 h1 {
   font-size: 2.5em;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin: 0px;
   font-family: Courier New, Courier, monospace;
   font-weight: 400;
   letter-spacing: 3px;
   text-align: center;
-  color: #E6AF2E;
+  color: #F7FF58;
 }
 
-h2 {
+a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   font-family: Courier New, Courier, monospace;
   text-align: center;
   margin-bottom: 5px;
@@ -74,9 +82,23 @@ h2 {
   color: #E6AF2E;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+.call-to-action, .bio {
+  font-family: Courier New, Courier, monospace;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  font-weight: 200;
+}
+
+.bio {
+    color: #E6AF2E;
+    max-width: 65%;
+
+}
+
+.call-to-action {
+  padding-top: 10px;
+  color: #A9CBB7;
 }
 
 @font-face {
