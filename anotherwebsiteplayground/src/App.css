@@ -1,0 +1,67 @@
+.App {
+  justify-content: center;
+  display: flex;
+  background-color: teal;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.App-background {
+  align-self: center;
+  color: white;
+}
+
+.Social-Row {
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.Social-Button {
+  font-family: 'Palanquin';
+  font-size: small;
+  background-color: transparent;
+  border-width: 1em;
+  border-style: solid;
+  border-width: 1px;
+  margin: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: cornflowerblue;
+  box-shadow: 2px 2px 2px darkslategray;
+  color: white;
+  transition: transform 0.4s;
+}
+
+.Social-Button:hover {
+  transform: scale(1.25);
+  transition: transform 0.5s ease-out;
+}
+
+.Social-Button:active {
+  transform: scale(0);
+}
+
+h1 {
+  padding-bottom: 0px;
+  font-family: 'PalanquinLight';
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: 'PalanquinLight';
+  src: url(./palanquin/palanquin-light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Palanquin';
+  src: url(./palanquin/palanquin-regular.ttf) format('truetype');
+}
