@@ -50,6 +50,9 @@
   transition: transform 0.01s;
 }
 
+.Social-Button:visited {
+  transform: scale(1);
+}
 .Starfield { height:100%; left:0; position:absolute; top:0; width:100%; z-index:0;}
 
 h1 {
@@ -60,7 +63,7 @@ h1 {
   font-weight: 400;
   letter-spacing: 3px;
   text-align: center;
-  color: white;
+  color: #E6AF2E;
 }
 
 h2 {
@@ -69,6 +72,7 @@ h2 {
   margin-bottom: 5px;
   font-weight: 100;
   font-size: 0.8em;
+  color: #E6AF2E;
 }
 
 a {

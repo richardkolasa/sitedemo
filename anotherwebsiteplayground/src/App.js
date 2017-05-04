@@ -18,7 +18,7 @@ class App extends Component {
                 <button className="Social-Button">LinkedIn</button>
               </a>
           </div>
-          <h2>I made this thing with React.</h2>
+          <h2>I made this thing with <a href="https://github.com/richardkolasa/sitedemo">React</a>.</h2>
         </div>
       </div>
     );
