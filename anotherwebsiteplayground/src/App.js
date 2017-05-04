@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-function Link(props) {
+function SocialLink(props) {
   return (
     <a href={props.address}>
       <button className={props.className}>{props.name}</button>
@@ -31,17 +31,17 @@ class App extends Component {
             writing, and advocating for changes to the modern work environment
           </div>
           <div className="social-row">
-            <Link 
+            <SocialLink 
               address={social.twitterURL}
               className={socialButtonClass}
               name={social.twitterName}
             />
-            <Link 
+            <SocialLink 
               address={social.mediumURL}
               className={socialButtonClass} 
               name={social.mediumName}
             />
-            <Link 
+            <SocialLink 
               address={social.linkedInURL}
               className={socialButtonClass}
               name={social.linkedInName}
