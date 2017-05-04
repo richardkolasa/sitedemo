@@ -90,10 +90,31 @@ footer {
   font-weight: 200;
 }
 
-.bio {
-    color: #E6AF2E;
-    max-width: 65%;
+@media screen and (max-width: 320px) {
+    .bio {
+        width: 90%;
+        font-size: 0.8em;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .call-to-action {
+      font-size: 0.8em;
+    }
+    footer {
+      font-size: 0.6em;
+    }
+}
 
+@media screen and (max-width: 320px) {
+    .bio {
+        max-width: 80%;
+    }
+}
+
+.bio {
+    width: 75%;
+    color: #E6AF2E;
 }
 
 .call-to-action {
