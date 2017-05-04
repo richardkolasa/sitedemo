@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
 
+function Link(props) {
+  return (
+    <a href={props.address}>
+      <button className={props.className}>{props.name}</button>
+    </a>
+  );
+}
+
+const social = {
+  twitterURL: 'https://www.twitter.com/richardkolasa',
+  twitterName: 'Twitter',
+  mediumURL: 'https://medium.com/@richkolasa',
+  mediumName: 'Medium',
+  linkedInURL: 'https://www.linkedin.com/in/richardkolasa/',
+  linkedInName: 'LinkedIn'
+}
+
+const socialButtonClass="social-button"
+
 class App extends Component {
   render() {
     return (
@@ -11,17 +30,22 @@ class App extends Component {
             i'm a photographer-turned-developer with a love for new technologies, 
             writing, and advocating for changes to the modern work environment
           </div>
-          
           <div className="social-row">
-              <a href="https://www.twitter.com/richardkolasa">
-                <button className="social-button">Twitter</button>
-              </a>
-              <a href="https://medium.com/@richkolasa">
-                <button className="social-button">Medium</button>
-              </a>
-              <a href="https://www.linkedin.com/in/richardkolasa/">
-                <button className="social-button">LinkedIn</button>
-              </a>
+            <Link 
+              address={social.twitterURL}
+              className={socialButtonClass}
+              name={social.twitterName}
+            />
+            <Link 
+              address={social.mediumURL}
+              className={socialButtonClass} 
+              name={social.mediumName}
+            />
+            <Link 
+              address={social.linkedInURL}
+              className={socialButtonClass}
+              name={social.linkedInName}
+            />
           </div>
           <div className="call-to-action">
             reach out, let's get into it
