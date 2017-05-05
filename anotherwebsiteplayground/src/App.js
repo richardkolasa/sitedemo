@@ -24,6 +24,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="ribbon-container">
+          <div className="ribbon">
+            <div className="ribbon-item">
+            Welcome!
+            </div>
+          </div>
+        </div>
         <div className="main-container">
           <h1>Rich Kolasa</h1>
           <div className="bio">
