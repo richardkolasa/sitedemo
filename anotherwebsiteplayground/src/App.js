@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
-function SocialLink(props) {
-  return (
-    <a href={props.address}>
-      <button className={props.className}>{props.name}</button>
-    </a>
-  );
-}
+import SocialButton from './components/SocialButton'
 
 const social = {
   twitterURL: 'https://www.twitter.com/richardkolasa',
@@ -24,13 +17,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="ribbon-container">
-          <div className="ribbon">
-            <div className="ribbon-item">
-            Welcome!
-            </div>
-          </div>
-        </div>
         <div className="main-container">
           <h1>Rich Kolasa</h1>
           <div className="bio">
@@ -38,17 +24,17 @@ class App extends Component {
             writing, and advocating for changes to the modern work environment
           </div>
           <div className="social-row">
-            <SocialLink 
+            <SocialButton 
               address={social.twitterURL}
               className={socialButtonClass}
               name={social.twitterName}
             />
-            <SocialLink 
+            <SocialButton 
               address={social.mediumURL}
               className={socialButtonClass} 
               name={social.mediumName}
             />
-            <SocialLink 
+            <SocialButton 
               address={social.linkedInURL}
               className={socialButtonClass}
               name={social.linkedInName}
