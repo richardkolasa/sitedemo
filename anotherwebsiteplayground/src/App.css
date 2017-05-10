@@ -54,7 +54,6 @@
 .social-row {
   flex-direction: row;
   align-self: center;
-  padding-top: 20px;
 }
 
 .social-button {
@@ -69,7 +68,6 @@
   padding-bottom: 5px;
   box-shadow: 5px 5px 10px black;
   color: white;
-  transition: transform 0.2s;
   outline: none;
 }
 

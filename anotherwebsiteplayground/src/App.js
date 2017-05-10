@@ -27,18 +27,15 @@ class App extends Component {
             <SocialButton 
               address={social.twitterURL}
               className={socialButtonClass}
-              name={social.twitterName}
-            />
+              name={social.twitterName} />
             <SocialButton 
               address={social.mediumURL}
               className={socialButtonClass} 
-              name={social.mediumName}
-            />
+              name={social.mediumName} />
             <SocialButton 
               address={social.linkedInURL}
               className={socialButtonClass}
-              name={social.linkedInName}
-            />
+              name={social.linkedInName} />
           </div>
           <div className="call-to-action">
             reach out, let's get into it
