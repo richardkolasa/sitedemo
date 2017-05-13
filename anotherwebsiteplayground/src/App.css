@@ -16,15 +16,6 @@
   height: inherit;
 }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 .social-row {
   flex-direction: row;
   align-self: center;
@@ -32,8 +23,8 @@
 
 .social-button {
   font-family: Courier New, Courier, monospace;
-  font-size: small;
-  background-color: transparent;
+  font-size: 18px;
+  background-color: #545E75;
   border: 1px solid #78FFD6;
   margin: 8px;
   padding-left: 10px;
@@ -43,6 +34,7 @@
   box-shadow: 5px 5px 10px black;
   color: white;
   outline: none;
+  transition: transform 0.15s ease-out;
 }
 
 .social-button:hover {
@@ -60,12 +52,13 @@
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.3em;
   padding-bottom: 10px;
   margin: 0px;
   font-family: Courier New, Courier, monospace;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
+  line-height: 1em;
   text-align: center;
   color: #78FFD6;
 }
