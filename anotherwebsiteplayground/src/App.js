@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import SocialButton from './components/SocialButton'
+import SocialButton from './components/SocialButton';
+import Bio from './components/Bio';
 
 const social = {
   twitterURL: 'https://www.twitter.com/richardkolasa',
@@ -10,8 +11,6 @@ const social = {
   linkedInURL: 'https://www.linkedin.com/in/richardkolasa/',
   linkedInName: 'LinkedIn'
 }
-
-const socialButtonClass='social-button'
 
 var date = new Date();
 var dayOfWeek = date.getDay();
@@ -25,16 +24,15 @@ weekdays[4] = 'thursday';
 weekdays[5] = 'friday';
 weekdays[6] = 'it\'s saturday, nice!';
 
+const bioText = 'im a photographer-turned-developer with a love for new technologies, writing, and advocating for changes to the modern work environment'
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="main-container">
         <h1>{weekdays[dayOfWeek]}</h1>
-          <div className="bio">
-            i'm a photographer-turned-developer with a love for new technologies, 
-            writing, and advocating for changes to the modern work environment
-          </div>
+        <Bio className="bio" bioText={bioText} />
           <div className="social-row">
             <SocialButton 
               address={social.twitterURL}
