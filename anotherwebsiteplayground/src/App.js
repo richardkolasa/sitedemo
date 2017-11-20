@@ -3,7 +3,11 @@ import { Route } from 'react-router-dom';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import Home from './Home';
+import Archive from './Archive';
+import ReadingList from './ReadingList';
+
 import './App.css';
+import './Archive.css';
 
 const firstChild = props => {
   const childrenArray = React.Children.toArray(props.children);
@@ -17,14 +21,14 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={({ match, ...rest}) => (
+          render={({ match, ...rest }) => (
             <TransitionGroup component={firstChild}>
               {match && <Home {...rest} />}
             </TransitionGroup>
-          )}/>
-        <footer>
-          Check out this site's code on <a href="https://github.com/richardkolasa/sitedemo">GitHub</a>.
-        </footer>
+          )}
+        />
+        <Route exact path="/archive" component={Archive} />
+        <Route exact path="/reading-list" component={ReadingList} />
       </div>
     );
   }
