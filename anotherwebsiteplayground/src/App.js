@@ -1,34 +1,37 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+
 import { Route } from 'react-router-dom';
-import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import Home from './Home';
-import Archive from './Archive';
-import ReadingList from './ReadingList';
-
-import './App.css';
 import './Archive.css';
 
-const firstChild = props => {
-  const childrenArray = React.Children.toArray(props.children);
-  return childrenArray[0] || null;
-};
-
 class App extends Component {
+  state = { lazyHome: null };
+
+  async componentDidMount() {
+    const { default: Home } = await import('./Home');
+    const { default: Archive } = await import('./Archive');
+    const { default: ReadingList } = await import('./ReadingList');
+    this.setState({
+      lazyHome: Home,
+      lazyArchive: Archive,
+      lazyReadingList: ReadingList
+    });
+  }
+
   render() {
     return (
       <div className="App">
+        <Helmet>
+          <link rel="stylesheet" href="animate.min.css" />
+        </Helmet>
+        <Route exact path="/" component={this.state.lazyHome} />
+        <Route exact path="/archive" component={this.state.lazyArchive} />
         <Route
           exact
-          path="/"
-          render={({ match, ...rest }) => (
-            <TransitionGroup component={firstChild}>
-              {match && <Home {...rest} />}
-            </TransitionGroup>
-          )}
+          path="/reading-list"
+          component={this.state.lazyReadingList}
         />
-        <Route exact path="/archive" component={Archive} />
-        <Route exact path="/reading-list" component={ReadingList} />
       </div>
     );
   }
