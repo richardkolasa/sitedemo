@@ -1,6 +1,4 @@
 # sitedemo
-A small React landing-page application.
+A small React landing-page with various routes.
 
 It's simple, and looks like this:
-
-![](https://i.imgur.com/DTKf6f9.png)
