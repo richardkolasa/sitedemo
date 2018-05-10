@@ -71,8 +71,11 @@
   .books-container {
     grid-template-columns: repeat(2, 300px);
     grid-template-areas:
-      "heading heading" "book1 book2" "book3 book4"
-      "book5 book6";
+      "heading heading" 
+      "book1 book2" 
+      "book3 book4"
+      "book5 book6" 
+      "book7 book8";
   }
 
   .books-container p {
@@ -85,8 +88,14 @@
   .books-container {
     grid-template-columns: 300px;
     grid-template-areas:
-      "heading" "book1" "book2" "book3" "book4" "book5"
-      "book6";
+      "heading" 
+      "book1" 
+      "book2" 
+      "book3" 
+      "book4" 
+      "book5"
+      "book6" 
+      "book7";
     padding-bottom: 0;
   }
 

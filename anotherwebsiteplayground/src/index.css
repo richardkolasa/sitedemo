@@ -67,6 +67,7 @@ h1 {
   letter-spacing: 1px;
   color: black;
   margin-top: 20px;
+  transition: font-size .25s linear;
 }
 
 .bio {
@@ -77,6 +78,7 @@ h1 {
   font-weight: 100;
   padding-right: 10px;
   margin-top: -20px;
+  transition: font-size .25s linear;
 }
 
 .bio a {
@@ -90,6 +92,9 @@ h1 {
 .profile-image img {
   max-width: 17em;
   max-height: 17em;
+  transition: max-width .25s linear;
+  transition: max-height .25s linear;
+
 }
 
 /* @media screen and (max-width: 1080px) {
