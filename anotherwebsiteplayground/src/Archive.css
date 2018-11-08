@@ -32,7 +32,6 @@
   grid-column: col-start 6 / span 3;
   grid-row: 8;
   max-width: 100%;
-  margin-bottom: 300px;
   z-index: 1;
 }
 

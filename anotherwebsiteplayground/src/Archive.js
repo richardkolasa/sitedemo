@@ -6,6 +6,16 @@ import './Archive.css';
 
 var images = [];
 
+function composeImage(index) {
+  return (
+    <img
+      src={images[index].src}
+      className={images[index].className}
+      alt={images[index].altText}
+    />
+  )
+}
+
 images[0] = new Image();
 images[0].src = require('./images/archive/archive1.jpg');
 images[0].className = 'imageClass circus';
@@ -112,86 +122,22 @@ class Grid extends Component {
       <div>
         <Header className="email" />
         <div className="archive-grid animated fadeIn">
-          <img
-            src={images[0].src}
-            className={images[0].className}
-            alt={images[0].altText}
-          />
-          <img
-            src={images[1].src}
-            className={images[1].className}
-            alt={images[1].altText}
-          />
-          <img
-            src={images[2].src}
-            className={images[2].className}
-            alt={images[2].altText}
-          />
-          <img
-            src={images[3].src}
-            className={images[3].className}
-            alt={images[3].altText}
-          />
-          <img
-            src={images[4].src}
-            className={images[4].className}
-            alt={images[4].altText}
-          />
-          <img
-            src={images[5].src}
-            className={images[5].className}
-            alt={images[5].altText}
-          />
-          <img
-            src={images[6].src}
-            className={images[6].className}
-            alt={images[6].altText}
-          />
-          <img
-            src={images[7].src}
-            className={images[7].className}
-            alt={images[7].altText}
-          />
-          <img
-            src={images[8].src}
-            className={images[8].className}
-            alt={images[8].altText}
-          />
-          <img
-            src={images[9].src}
-            className={images[9].className}
-            alt={images[9].altText}
-          />
-          <img
-            src={images[10].src}
-            className={images[10].className}
-            alt={images[10].altText}
-          />
-          <img
-            src={images[11].src}
-            className={images[11].className}
-            alt={images[11].altText}
-          />
-          <img
-            src={images[12].src}
-            className={images[12].className}
-            alt={images[12].altText}
-          />
-          <img
-            src={images[13].src}
-            className={images[13].className}
-            alt={images[13].altText}
-          />
-          <img
-            src={images[14].src}
-            className={images[14].className}
-            alt={images[14].altText}
-          />
-          <img
-            src={images[15].src}
-            className={images[15].className}
-            alt={images[15].altText}
-          />
+          {composeImage(0)}
+          {composeImage(1)}
+          {composeImage(2)}
+          {composeImage(3)}
+          {composeImage(4)}
+          {composeImage(5)}
+          {composeImage(6)}
+          {composeImage(7)}
+          {composeImage(8)}
+          {composeImage(9)}
+          {composeImage(10)}
+          {composeImage(11)}
+          {composeImage(12)}
+          {composeImage(13)}
+          {composeImage(14)}
+          {composeImage(15)}
         </div>
       </div>
     );
