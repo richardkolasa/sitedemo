@@ -7,14 +7,16 @@
 
 .books-container {
   display: grid;
-  justify-content: center;
-  grid-template-columns: 280px 280px 280px;
+  grid-template-columns: 25% 25% 25%;
   grid-template-areas:
   "book1 book2 book3" "book4 book5 book6" "book7 book8 book9";
   grid-row-gap: 30px;
   grid-column-gap: 30px;
   color: black;
   padding-bottom: 40px;
+  margin-top: 15px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .books-container a {
@@ -23,8 +25,8 @@
 }
 
 .books-container img {
-  max-width: 100%;
   box-shadow: -5px 5px 10px #888888;
+  max-width: 300px;
 }
 
 .books-container p {
@@ -67,11 +69,14 @@
   grid-area: book7;
 }
 
+.book-8 {
+  grid-area: book8;
+}
+
 @media screen and (max-width: 920px) {
   .books-container {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(2, 45%);
     grid-template-areas:
-      "heading heading" 
       "book1 book2" 
       "book3 book4"
       "book5 book6" 
@@ -86,17 +91,18 @@
 
 @media screen and (max-width: 580px) {
   .books-container {
-    grid-template-columns: 300px;
+    grid-template-columns: 100%;
     grid-template-areas:
-      "heading" 
       "book1" 
       "book2" 
       "book3" 
       "book4" 
       "book5"
       "book6" 
-      "book7";
+      "book7"
+      "book8";
     padding-bottom: 0;
+    justify-content: normal;
   }
 
   .books-container p {

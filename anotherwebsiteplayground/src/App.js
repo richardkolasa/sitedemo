@@ -1,30 +1,63 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-class App extends Component {
-  state = { lazyHome: null };
+import Home from './Home';
+import WhatMatters from './WhatMatters';
 
-  async componentDidMount() {
-    const { default: Home } = await import('./Home');
-    const { default: Archive } = await import('./Archive');
-    const { default: ReadingList } = await import('./ReadingList');
-    this.setState({
-      lazyHome: Home,
-      lazyArchive: Archive,
-      lazyReadingList: ReadingList
-    });
+const archivePromise = import("./Archive");
+const Archive = React.lazy(() =>
+  archivePromise
+);
+
+const readingListPromise = import("./ReadingList");
+const ReadingList = React.lazy(() =>
+  readingListPromise
+);
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      class: ''
+    };
   }
+
+  switch = () => {
+    var mode = localStorage.getItem('mode');
+    if (mode === 'lightMode') {
+      localStorage.setItem('mode', 'nightMode');
+      this.setState({ class: 'appNight' });
+    } else {
+      localStorage.setItem('mode', 'lightMode');
+      this.setState({ class: 'appLight' })
+    }
+  }
+
+  componentDidMount = () => {
+    var mode = localStorage.getItem('mode');
+    if (mode) {
+      this.setState({ class: mode });
+    } else {
+      this.setState({ class: 'default' });
+    }
+  };
 
   render() {
     return (
-      <div className="App">
-        <Route exact path="/" component={this.state.lazyHome} />
-        <Route exact path="/archive" component={this.state.lazyArchive} />
-        <Route
-          exact
-          path="/reading-list"
-          component={this.state.lazyReadingList}
-        />
+      <div className={this.state.class}>
+        <Route exact path="/" component={Home} />
+        <React.Suspense fallback={<div></div>}>
+          <Route exact path="/archive" component={Archive} />
+        </React.Suspense>
+        <React.Suspense fallback={<div></div>}>
+          <Route
+            exact
+            path="/reading-list"
+            component={ReadingList}
+          />
+        </React.Suspense>
+        <Route exact path="/what-matters" component={WhatMatters} />
+        <button onClick={this.switch}>test</button>
       </div>
     );
   }

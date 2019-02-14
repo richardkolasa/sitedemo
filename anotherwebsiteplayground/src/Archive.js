@@ -121,7 +121,10 @@ class Grid extends Component {
     return (
       <div>
         <Header className="email" />
-        <div className="archive-grid animated fadeIn">
+        <p>As I get older, I'm increasingly moved by discarded family photos:
+        the duplicates, the rejects, the photos at the bottom of the box.
+        I use them to illustrate my own experience.</p>
+        <div className="archive-grid">
           {composeImage(0)}
           {composeImage(1)}
           {composeImage(2)}

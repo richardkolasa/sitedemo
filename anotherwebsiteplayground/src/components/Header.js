@@ -8,7 +8,7 @@ export default function Header(props) {
           <h1>Richard Kolasa</h1>
         </a>
         <a href="mailto:hello@richardkolasa.com">
-          <p className={props.className}>hello@richardkolasa.com</p>
+          <div className="email">hello@richardkolasa.com</div>
         </a>
       </div>
     </div>
