@@ -15,36 +15,36 @@ const ReadingList = React.lazy(() =>
 );
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      class: ''
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     class: ''
+  //   };
+  // }
 
-  switch = () => {
-    var mode = localStorage.getItem('mode');
-    if (mode === 'lightMode') {
-      localStorage.setItem('mode', 'nightMode');
-      this.setState({ class: 'appNight' });
-    } else {
-      localStorage.setItem('mode', 'lightMode');
-      this.setState({ class: 'appLight' })
-    }
-  }
+  // switch = () => {
+  //   var mode = localStorage.getItem('mode');
+  //   if (mode === 'lightMode') {
+  //     localStorage.setItem('mode', 'nightMode');
+  //     this.setState({ class: 'appNight' });
+  //   } else {
+  //     localStorage.setItem('mode', 'lightMode');
+  //     this.setState({ class: 'appLight' })
+  //   }
+  // }
 
-  componentDidMount = () => {
-    var mode = localStorage.getItem('mode');
-    if (mode) {
-      this.setState({ class: mode });
-    } else {
-      this.setState({ class: 'default' });
-    }
-  };
+  // componentDidMount = () => {
+  //   var mode = localStorage.getItem('mode');
+  //   if (mode) {
+  //     this.setState({ class: mode });
+  //   } else {
+  //     this.setState({ class: 'default' });
+  //   }
+  // };
 
   render() {
     return (
-      <div className={this.state.class}>
+      <div className="App">
         <Route exact path="/" component={Home} />
         <React.Suspense fallback={<div></div>}>
           <Route exact path="/archive" component={Archive} />
@@ -57,7 +57,6 @@ class App extends Component {
           />
         </React.Suspense>
         <Route exact path="/what-matters" component={WhatMatters} />
-        <button onClick={this.switch}>test</button>
       </div>
     );
   }
